@@ -1,0 +1,23 @@
+body {
+  padding-top: 100px;
+  color: #EBEBEB;
+  background-color: #2B3E50;
+}
+
+.btn-success:hover {
+  color: #fff;
+  background-color: #48a648;
+  border-color: #449d44;
+}
+
+.bg-primary {
+  background-color: #DF691A !important;
+}
+
+.jumbotron {
+  background-color: #4E5D6C;
+}
+
+a {
+  color: #EBEBEB;
+}

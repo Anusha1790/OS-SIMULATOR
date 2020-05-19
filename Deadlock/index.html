@@ -1,81 +1,81 @@
 <html>
-	<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	</head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<style>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-			body{
-				font-family: "courier new", Times, serif;	
-				background-color: #272727;
-			}
-
-			.button1 {
-			  border-radius: 4px;
-			  background-color: #ff652f;
-			  border: none;
-			  color: #FFFFFF;
-			  text-align: center;
-			  font-size: 28px;
-			  padding: 20px;
-			  width: 200px;
-			  transition: all 0.5s;
-			  cursor: pointer;
-			  margin: 5px;
-			}
-
-			.button1 span {
-			  cursor: pointer;
-			  display: inline-block;
-			  position: relative;
-			  transition: 0.5s;
-			}
-
-			.button1 span:after {
-			  content: '\00bb';
-			  position: absolute;
-			  opacity: 0;
-			  top: 0;
-			  right: -20px;
-			  transition: 0.5s;
-			}
-
-			.button1:hover span {
-
-			  padding-right: 25px;
-			}
-
-			.button1:hover{
-				background: linear-gradient(to right, #ff652f 16%, #ffe400 100%);
-			}
-			.button1:hover span:after {
-			  opacity: 1;
-			  right: 0;
-			}
-
-
-			/*=====2=========================== style 2 ========================================*/
-			.button2 {
+<style>
+  body {
+    font-family: "courier new", Times, serif;
+    background-color: #343233;
+  }
+  
+  .button1 {
+    border-radius: 4px;
+    background-color: #ff652f;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button1 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button1 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button1:hover span {
+    padding-right: 25px;
+  }
+  
+  .button1:hover {
+    background: linear-gradient(to right, #ff652f 16%, #ffe400 100%);
+  }
+  
+  .button1:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  /*=====2=========================== style 2 ========================================*/
+  
+  .button2 {
     position: relative;
     font-size: 28px;
     color: #FFFFFF;
     padding: 20px;
     width: 200px;
     text-align: center;
-    -webkit-transition-duration: 0.2s; /* Safari */
+    -webkit-transition-duration: 0.2s;
+    /* Safari */
     transition-duration: 0.4s;
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
-}
-
-.button2:after {
+  }
+  
+  .button2:after {
     content: "";
     background: #90EE90;
     display: block;
@@ -86,83 +86,103 @@
     margin-top: -120%;
     opacity: 0;
     transition: all 0.9s
-}
-
-.button2:active:after {
+  }
+  
+  .button2:active:after {
     padding: 0;
     margin: 0;
     opacity: 1;
     transition: 0s;
     background-color: green;
-}
+  }
+  
+  .back {
+    background-color: green;
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .but1 {
+    position: absolute;
+    margin-left: 40%;
+    margin-top: 5%;
+  }
+  
+  .but2 {
+    position: absolute;
+    margin-left: 40%;
+    margin-top: 20%;
+  }
+  
+  .navbar-inverse {
+    background-color: #584b4f;
+  }
+  
+  #gandu {
+    color: #efeae1;
+  }
+  
+  .wrapper {
+    position: absolute;
+    right: 150px;
+    color: #fee400;
+    /* height: 150px; */
+  }
+  
+  #particles-js {
+    height: 100%;
+  }
+</style>
 
-.back{
-	background-color: green;
-	border-radius: 4px;
-	border: none;
-	color: #FFFFFF;
-	text-align: center;
-	font-size: 28px;
-	padding: 20px;
-	width: 200px;
-	transition: all 0.5s;
-	cursor: pointer;
-	margin: 5px;	
-}
-
-.but1{
-	
-	position:absolute;
-	margin-left:40%;
-	margin-top:5%;
-}
-
-.but2{
-	
-	position:absolute;
-	margin-left:40%;
-	margin-top:20%;
-}
-
-		</style>		
-
-	<body>
-		  <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
- <div class="navbar-header">
-  <a class="navbar-brand" href="./os_sim.html">OS simulator</a>
-   </div>
-  <ul class="nav navbar-nav">
-      <li class="active"><a href="../os_sim.html">Home</a></li>
-     <li class="active"><a href="../wiki-sample/wiki.html">Wiki</a></li>
-   </ul>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" id="gandu" href="./os_sim.html">OS simulator</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a id="gandu" href="../os_sim.html">Home</a></li>
+        <li>
+          <a id="gandu" href=" ../wiki-sample/wiki.html ">Wiki</a></li>
+      </ul>
+    </div>
   </div>
-</nav>
-<br><br>
-		<h1 style="text-align:center; color:#fee400"> DEADLOCK </h1>
+  <br><br>
+  <h1 style="position:absolute;margin-bottom:150px;left:37%; color:#fee400 "> DEADLOCK </h1>
+  <div id="particles-js">
+    <!-- <div class="wrapper"></div> -->
 
-		<button class="button1 button2 but1" onclick="change(0)"><span>BANKER</span></button>
-		<button class="button1 button2 but2" onclick="change(1)"><span>SINGLE INSTANCE </span></button>
+    <button class="button1 button2 but1 " onclick="change(0) "><span>BANKERS</span></button>
+    <button class="button1 button2 but2 " onclick="change(1) "><span>SINGLE INSTANCE </span></button>
+  </div>
+</body>
 
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<script>
+  function change(but_num) {
+    var bu = document.getElementsByTagName("button")[but_num];
+    bu.classList.add("back");
+    bu.classList.remove("button1");
 
-	</body>
+    if (but_num == 0) {
+      window.location = "banker.html";
+    }
 
-	<script>
-		function change(but_num){
-			var bu = document.getElementsByTagName("button")[but_num];
-			bu.classList.add("back");
-			bu.classList.remove("button1");
+    if (but_num == 1) {
+      window.location = "deadlock.html";
+    }
+  }
+</script>
 
-			if(but_num == 0)
-			{
-				window.location = "banker.html";
-			}
+<script type="text/javascript" src="particles.js"></script>
+<script type="text/javascript" src="app.js"></script>
 
-			if(but_num == 1)
-			{
-				window.location = "deadlock.html";
-			}
-		}
-	</script>
+
 </html>
