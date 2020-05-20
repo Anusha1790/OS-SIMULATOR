@@ -15,9 +15,8 @@
   <style>
     .button
     {
-      background-color: #4CAF50;
-      border: #4CAF50;
-      padding: 5px 10px;
+      background-color:rgb(150,150,150);
+      border: rgb(150,150,150); 
       color: white;
     }
 
@@ -49,7 +48,6 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     }
 
     #queue_one
@@ -82,10 +80,10 @@
     }
   </style>
 
-  <body style="background-color: #FFFFCC">
+  <body style="background-color: rgb(220,220,220);">
     <a href="index.html">Back</a>
 
-    <h1 style="text-align:center;color: #A300CC">Multi-level Feedback Queue Scheduling</h1>
+    <h1 style="text-align:center">Multi-level Feedback Queue Scheduling</h1>
     <br><br>
 
     <div class="split left" id="left_pane">
@@ -103,12 +101,12 @@
 
        <table id="proc_table" class="table table-bordered" style="width:500px;display:none">
          <thead>
-           <tr id="thead" style="background-color:#4DA6FF">
-             <th>Proc_ID</th>
-             <th>Arrival Time</th>
-             <th>Burst Time</th>
-             <th>Waiting Time</th>
-             <th>Turn Around Time</th>
+           <tr id="thead" style="background-color:rgb(50,50,50);">
+             <th style="color:white">Proc_ID</th>
+             <th style="color:white">Arrival Time</th>
+             <th style="color:white">Burst Time</th>
+             <th style="color:white">Waiting Time</th>
+             <th style="color:white">Turn Around Time</th>
            </tr>
            <tbody id="proc_body"></tbody>
          </thead>
