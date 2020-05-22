@@ -42,6 +42,9 @@
 </nav>
 
 <center><h1 class="some" behavior="alternate" scrollamount=10>Indexed Allocation</h1></center>
+<strong> Please enter the file names and sizes as promted. Start and end in the simulation are incluse .If start = a and end = b 
+	It means a,..b are all allocated to that file. 
+</strong>
 <div id="sequ">
 	<div class="visible1">
 	<p> Enter the size of memory(number of blocks)</p>
@@ -168,9 +171,9 @@
 	function showOutput(){
 		var str = "";
 		var j;
-		document.getElementById("op1").innerHTML = "File______Start_____End_____Size";
+		document.getElementById("op1").innerHTML = "File	Start	End	  Size";
 		for(var i = 0; i < count; i++){
-			str += "<br />" + file_names[i]  + "________" + starts[i] + "________" + ends[i] + "________" + file_sizes[i] + "_______";
+			str += "<br />" + file_names[i]  + "	" + starts[i] + "	  " + ends[i] +  "      " + file_sizes[i] + "	  ";
 			//j = starts[count];
 			for(j = 0; j < memSize; j++){
 				//console.log(allocations[j], count);

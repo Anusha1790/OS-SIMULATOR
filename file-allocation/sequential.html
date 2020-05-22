@@ -51,9 +51,12 @@
 
 
 <center><h1 class="some" behavior="alternate" scrollamount=10>Sequential Allocation</h1></center>
+<strong> Please enter the file names and sizes as promted. Start and end in the simulation are incluse .If start = a and end = b 
+	It means a,..b are all allocated to that file. 
+</strong>
 <div id="sequ">
 	<div class="visible1">
-	<p> Enter the size of Memory(number of blocks)</p>
+	<p> <strong>Enter the size of Memory(number of blocks)</strong></p>
 	<input id="nof" type="number">
 	<button class="s_done" onclick="getSize()">Submit</button>
 	<a href="sequential.html" class="w3-button w3-black">Reset</a>
@@ -142,7 +145,7 @@
 		ctx.fillStyle = "#f1f1f1";
 		ctx.fillRect(0, 0, canv.width, canv.height);
 
-		document.getElementById("op1").innerHTML = "File______Start_____End_____Size";
+		document.getElementById("op1").innerHTML = "File    Start    End     Size";
 		for(var i = 0; i < count; i++){
 			str += file_names[i]  + "________" + starts[i] + "________" + ends[i] + "________" + file_sizes[i] + "<br />";
 			ctx.fillStyle = colors[i];
