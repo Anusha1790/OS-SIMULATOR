@@ -35,8 +35,7 @@ opacity: 1;
   </style>
 </head>
 
-<body style="background-color:#FFE4B5;height:1500px" class="heading">
-
+<body style="background-image: url('blck.jpg');height:1500px" class="heading">
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -50,78 +49,30 @@ opacity: 1;
 </nav>
  <br><br><br>
   <div class="page-header" >
-    <h1 style="background-color:#CCCC00;float:center"><marquee><b>Reader-Writer Semaphore</b></marquee></h1>      
+    <h1 style="color: rgb(248, 248, 242);text-align: center;float:center"><b><u>Reader-Writer Semaphore</u></b></h1> 
   </div>
 
    
-<div>
-      <form>
-        <textarea id="doc" style="height:50%;width:15%;position:absolute;left:3%;font-size:17px; color : black; background-color:#BDB76B;border:solid 2px black; " disabled="">
-void reader(){
-   while(1){
-     wait(z);
-      wait(rsem);
-       wait(x);
-        readcount++;
-        if (readcount==1) 
-             wait(wsem);
-       signal(x);
-      signal(rsem);
-     signal(z);
-     doReading();
-     wait(x);
-        readcount--;
-        if (readcount==0)
-             signal(wsem);
-     signal(x);
-   }
-}
-        </textarea>
-      </form>
-    </div>
-
-    <div>
-      <form>
-        <textarea id="doc" style="height:50%;width:15%;position:absolute;right:3%;font-size:17px;color : black; background-color:#BDB76B;border:solid 2px black; " disabled="">
-void writer(){
-  while(1){
-      wait(y);
-        writecount++;
-        if (writecount==1) 
-             wait(rsem);
-      signal(y);
-      wait(wsem);
-      doWriting();
-      signal(wsem);
-      wait(y);
-        writecount--;
-        if (writecount==0)
-             signal(rsem);
-      signal(y);
-   }
-}
-        </textarea>
-      </form>
-    </div>
 
 
+<div style="padding: 23%;">
 
 <button type = "button", id ="reader", name = "read", class = "btn btn-primary" onclick="reader()" , style="height:7%;width:10%;position:absolute;top:30%;left:35%;border:solid 4px black;font-size:17px">Read the file  </button>
 
 <button type = "button", id ="writer", name = "write", class = "btn btn-primary" onclick="writer()" , style="height:7%;width:10%;position:absolute;top:30%;right:35%;border:solid 4px black;font-size:17px;">Write in the file  </button>
 
-<button type = "button", id ="stop", name = "write", class = "btn btn-primary" onclick="stop()" , style="height:7%;width:8%;position:absolute;top:65%;left:72%;font-size:17px;border:solid 4px black;visibility: hidden;">Stop writing </button>
+<button type = "button", id ="stop", name = "write", class = "btn btn-primary" onclick="stop()" , style="height:7%;width:8%;position:absolute;top:30%;font-size:17px;border:solid 4px black;visibility: hidden;">Stop writing </button>
 
     <div>
       <form>
-        <textarea id="textarea", style="height:40%;width:43%;position:absolute;top:40%;left:28%;border:solid 4px black;font-size:20px" disabled="false"> </textarea>
+        <textarea id="textarea", style="height:50%;width:56%;position:absolute;top:40%;border:solid 4px black;font-size:20px" disabled="false"> </textarea>
       </form>
     </div>
 <!-- 
 <img src="http://icons.iconarchive.com/icons/iconshock/windows-7-general/64/administrator-icon.png" style="position: absolute;height: 100px;width: 100px; top: 50%;left:72%; "  id="writer1"> -->
 
 <div >
-      <form style="background: #E0E0E0;" >
+      <form style="background: rgb(243, 241, 128);" >
         <textarea id="textarea1", style="height:20%;width:10%;position:absolute;top:90%;left:25%;font-size:20px;visibility: hidden;" disabled=""> </textarea>
         <textarea id="textarea2", style="height:20%;width:10%;position:absolute;top:90%;left:38%;font-size:20px;visibility: hidden;" disabled=""> </textarea>
         <textarea id="textarea3", style="height:20%;width:10%;position:absolute;top:90%;left:50%;font-size:20px;visibility: hidden;" disabled=""> </textarea>
@@ -158,7 +109,7 @@ void writer(){
 <img src="http://icons.iconarchive.com/icons/iconshock/super-vista-general/128/administrator-icon.png" style="position: absolute;height: 100px;width: 100px; top: 60%;left:22%; visibility: hidden; "  id="read4">
 
 
-<img src="http://icons.iconarchive.com/icons/iconshock/windows-7-general/64/administrator-icon.png" style="position: absolute;height: 100px;width: 100px; top: 50%;left:72%;visibility: hidden; "  id="writer1">
+<img src="http://icons.iconarchive.com/icons/iconshock/windows-7-general/64/administrator-icon.png" style="position: absolute;height: 100px;width: 100px; top: 50%;left:102%;visibility: hidden; "  id="writer1">
 
 <!-- <button type = "button", id ="reader1", name = "read1", class = "btn btn-primary", style="height:5%;width:7%;position:absolute;top:40%;left:20%;font-size:17px">Reader1 </button>
 
@@ -310,7 +261,60 @@ reader();
    }
 
 </script>
+</div>
+<div class="jumbotron jumbotron-fluid" style="top: 80%;">
+  <div class="container">
+    <div style="color:black;font-size: 25px;"><p>There is a shared resource which should be accessed by multiple processes. There are two types of processes in this context. They are reader and writer. Any number of readers can read from the shared resource simultaneously, but only one writer can write to the shared resource. When a writer is writing data to the resource, no other process can access the resource. A writer cannot write to the resource if there are non zero number of readers accessing the resource at that time.</p></div>    
 
+<h2><b>Reader Algo</b></h2>
+<p>
+void reader(){<br>
+while(1){<br>
+ wait(z);<br>
+  wait(rsem);<br>
+   wait(x);<br>
+    readcount++;<br>
+    if (readcount==1) <br>
+         wait(wsem);<br>
+   signal(x);<br>
+  signal(rsem);<br>
+ signal(z);<br>
+ doReading();<br>
+ wait(x);<br>
+    readcount--;<br>
+    if (readcount==0)<br>
+         signal(wsem);<br>
+ signal(x);<br>
+}<br>
+}<br>
+  </p>
+  </div>
+</div>
+
+<div class="jumbotron jumbotron-fuid" style="top: 90%;">
+  <div class="container">
+<h2><b>Writer Algo</b></h2>
+<p>
+    void writer(){<br>
+while(1){<br>
+  wait(y);<br>
+    writecount++;<br>
+    if (writecount==1) <br>
+         wait(rsem);<br>
+  signal(y);<br>
+  wait(wsem);<br>
+  doWriting();<br>
+  signal(wsem);<br>
+  wait(y);<br>
+    writecount--;<br>
+    if (writecount==0)<br>
+         signal(rsem);<br>
+  signal(y);<br>
+}<br>
+}<br>
+</p>
+  </div>
+</div>
 
 </body>
 </html>
