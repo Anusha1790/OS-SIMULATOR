@@ -133,7 +133,7 @@ display: flex;
  --><!--   <div class="row">
  -->     <!-- HEADER -->
 <!--         <div class="header">
- -->            <img style="width:100%;height: 70%" src="blck.jpg" />
+ -->            
             <div class="triangulo"></div>
             <div class="profile">
                 <img class="photo-author img-circle" src="/home/seff/Desktop/OS/CR7.jpg" />
@@ -143,7 +143,7 @@ display: flex;
             <h2 class="title">PROCESS SYNCRONISATION</h2>
 <!--         </div>
  -->
-
+      <br><br>
      <div class="page-header" >
     <h1 style="float:center">Syncronisation</h1>      
   </div>
@@ -155,94 +155,11 @@ display: flex;
  -->        </div>
 <!--         <div class="row row-eq-height" style="padding-right:15px">
  --><!--             <div class="col-xs-12 text">
- -->                <p class="semi-title">Process Synchronization means sharing system resources by processes in a such a way that,</p>
-                <p class="semi-title"> Concurrent access to shared data is handled thereby minimizing the chance of inconsistent data.</p>
-                <p class="semi-title"> Maintaining data consistency demands mechanisms to ensure synchronized execution of cooperating processes.</p>
-<p class="semi-title">Process Synchronization was introduced to handle problems that arose while multiple process executions.</p>
-                                            <p class="semi-title">Data Structures used for Synchronization:</p>
-
-                                            <ol>
-                                                  <h4 class="semi-title">1.Mutex Locks</h4>
-                                                  <p>In this approach, in the entry section of code, a LOCK is acquired over the critical resources modified and used inside critical section (block of code where the shared resources are being modified ), 
-                                                  </p>
-                                                  <p>and in the exit section that LOCK is released.As the resource is locked while a process executes its critical section hence no other process can access it.</p>
-                                                  
-                                                  <h4 class="semi-title">2.Semaphores</h4>
-                                                  <p>In 1965, Dijkstra proposed a new and very significant technique for managing concurrent processes by using the value of a</p>
-                                                  <p> simple integer variable to synchronize the progress of interacting processes. This integer variable is called semaphore. </p>
-                                                  <p>So it is basically a synchronizing tool and is accessed only through two low standard atomic operations, wait() and signal().</p>
-                                                  
-                                                    <h6 class="semi-title">Wait : decrement the value of its argument S as soon as it would become non-negative.</h6>
-                                                    <h6 class="semi-title">Signal :increment the value of its argument, S as an individual operation.</h6> 
-                                                </p>
-
-                                              </li>
-                                            </ol>
-<p class="semi-title"></p>
-<!-- <a href="#top">#back to top</a><hr> -->
-                               
-                                                               <h2 class="dark-text">Critical Section Problems</h2>
-             
-
-                                <h4 class="semi-title">Producer   Consumer Problem</h4>
-                                <p>It is also known as the bounded buffer problem. The problem consists of two processes, the producer and consumer, sharing a common buffer (fixed size). </p>
-                                                  <p>The producer's job is to generate data and store it in the common buffer, one at a time. The consumer keeps consuming data until the common buffer empties.
-                                </p>
-                                <p>The producer should't be able to produce more data items when the buffer is full, and the consumer shouldn't be able to consumer the data items when the buffer is empty.
-                                </p>
-
-
-                                <h4 class="semi-title">Reader Writer Problem</h4>
-                                <p>This is an example of common concurrency problem. Here many threads try to access the same shared resource simultaneously. Threads may read/write (or append).</p><p> Threads reading the shared resource can do it simultaneously, i.e. two or more readers are allowed to access the shared resource.</p> <p>If a thread is writing into the resource, no other thread can access the resource.
-                                </p>
-                         <!-- end col -->
-
-                        </div>
-
-<p class="semi-title">Dinning Philosopher</p>
-                <p>
-
-The problem consists of five philosophers sitting around a circular table.</p>
-<p> The table has five forks. At any instance, a philosopher is eating or thinking.</p>
-<p> When a philosopher wants to eat, he has to use two forks, one from his left and one from his right.</p>
-<p> When a philosopher starts thinking, he keeps the two forks on the table. </p>
-<p> So, philosopher requires the two forks(shared resource) to start eating.  </p>
-
-
-  <h4 class="semi-title">Sleeping Barber Problem</h4>
-                                  <p>This is an example of synchronization problem. The objective is to keeping a barber working when there are customers, resting when there are none in an orderly manner.
-                                  </p>
-                                 <p>The barber has one barber chair and a waiting room with a number of chairs in it. When the barber finishes cutting a customer's hair, he dismisses the customer</p><p> and then goes to the waiting room to see if there are other customers waiting. If there are, he brings one of them back to the chair and cuts his hair. </p><p>If there are no other customers waiting, he returns to his chair and sleeps in it.
-                                 </p>
-                                 <p>Each customer, when he arrives, looks to see what the barber is doing. If the barber is sleeping, then the customer wakes him up </p><p>and sits in the chair. If the barber is cutting hair, then the customer goes to the waiting room. </p><p>If there is a free chair in the waiting room, the customer sits in it and waits his turn. If there is no free chair, then the customer leaves.
-                                 </p>
-                                 <br>
-                                 <br>
-<!--             </div>
- -->            <!-- Sidebar // advertising -->
-           
-<!--              </div>
- -->
-<!-- <div style="top:120%;right: 0%;position: absolute;background: #e0e0e0;">
-      
-<h1>If needed add somethings here</h1>
-<p> or else delete this division</p>
-       
-        <small>
-               
-                <p style="margin-bottom:0px;margin-top:25px;"><b>Noticias importantes</b></p>
-                <ul class="list-group">
-                    <li class="list-group-item"><big><b>1.</b></big> Cras justo odio</li>
-                    <li class="list-group-item"><big><b>2.</b></big> Dapibus ac facilisis in</li>
-                    <li class="list-group-item"><big><b>3.</b></big> Morbi leo risus</li>
-                    <li class="list-group-item"><big><b>4.</b></big> Porta ac consectetur ac</li>
-                    <li class="list-group-item"><big><b>5.</b></big> Vestibulum at eros</li>
-                </ul>
-                </small>
-</div> -->
-<!--          </div>
- -->
-     </div>
-
+ -->                <br>
+   <a href="https://en.wikipedia.org/wiki/Producer%E2%80%93consumer_problem">click here to know more about consumer producer</a><br>
+   <a href="https://en.wikipedia.org/wiki/Dining_philosophers_problem">click here to know more about dining philosopher's problem</a><br>
+   <a href="https://en.wikipedia.org/wiki/Synchronization_(computer_science)#Barriers">click here to know more barrier</a><br>
+   <a href="https://www.geeksforgeeks.org/readers-writers-problem-set-1-introduction-and-readers-preference-solution/">click here to know more about reader-writer problem</a>
+<br>
  </body>
 </html>

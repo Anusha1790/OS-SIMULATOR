@@ -24,11 +24,10 @@
  <br><br><br>
   <div class="jumbotron">
     <h1 style="color: rgb(15, 8, 8);float:center;text-align: center;"><b><u>Producer Consumer</b> </u></h1>   
-    <p>The problem describes two processes, the producer and the consumer, who share a common, fixed-size buffer used as a queue. The producer's job is to generate data, put it into the buffer, and start again. At the same time, the consumer is consuming the data (i.e., removing it from the buffer), one piece at a time. The problem is to make sure that the producer won't try to add data into the buffer if it's full and that the consumer won't try to remove data from an empty buffer.</p>   
 </div>
 
  
-<div style="padding: 17%;">
+<div style="padding: 23%;">
   <br><br><br><br>
  <button class="btn btn-primary" id ="prod", type ="button", onclick ="barrieradd()", style ="height:10%;width:15%;position:absolute;top:38%;left:1%;font-size:25px;border:solid 4px black;">Proceed</button>
 
@@ -55,6 +54,8 @@
     <button class="btn btn-warning" id ="count", type ="button" style ="height:100px;width:165px;border:solid 4px black;position:absolute;top:46%;left:45%;">counter = 0</button>
     <div class="jumbotron jumbotron-fluid" style="text-align: left;">
       <div class="container-fluid">
+        <p>The problem describes two processes, the producer and the consumer, who share a common, fixed-size buffer used as a queue. The producer's job is to generate data, put it into the buffer, and start again. At the same time, the consumer is consuming the data (i.e., removing it from the buffer), one piece at a time. The problem is to make sure that the producer won't try to add data into the buffer if it's full and that the consumer won't try to remove data from an empty buffer.</p>   
+<br><br>
         <h2><b><u>Producer algo</u></b></h2>
         <p><br>
           while(1)<br>
