@@ -32,28 +32,28 @@
 	  </nav>
 	  <br><br><br>
 	  <div class="page-header" >
-		 <h1 style="text-align:center;color:blue">MULTI-LEVEL PAGING</h1> 
+		 <h1 style="text-align:center;color:rgb(230, 9, 57)">MULTI-LEVEL PAGING</h1> 
 		    
 	  </div>
 	  <body>
-			<h1 style="text-align:center;color:blue"> LOGICAL ADDRESS SPLIT</h1>    
+			<h1 style="margin-left:20px;color:rgb(230, 9, 57)"> LOGICAL ADDRESS SPLIT</h1>    
 	  <br>
     
     <form>
-        <div class="form-group row" style="width:25vw;display:block">
+        <div class="form-group row" style="margin-left:20px;width:25vw;display:block">
             <input type = "number" id="virtualaddress" class="form-control" placeholder="Enter the virtual address (bits):"/ required>
         </div>
-        <div class="form-group row" style="width:25vw;display:block">
+        <div class="form-group row" style="margin-left:20px;width:25vw;display:block">
             <input type = "number" id="page" class="form-control" placeholder="Enter the Page size (Numeric):" required>
         </div>
-        <div class="form-group row" style="width:25vw;display:block">
+        <div class="form-group row" style="margin-left:20px;width:25vw;display:block">
             <input type = "text" id="ps" class="form-control" placeholder="Enter the unit of Page size:" required>  
         </div>
-        <div class="form-group row" style="width:25vw;display:block">
+        <div class="form-group row" style="margin-left:20px;width:25vw;display:block">
             <input type = "number" id="pte" class="form-control" placeholder="Enter page table entry size:" required>
-           
+        </div>   
         <div class="form-group row">
-            <input type = "button" id ="btn" class="btn btn-primary btn-lg" style="margin:10px" onclick = "mlp()" value = "Compute">  
+            <input type = "button" id ="btn" class="btn btn-danger btn-lg" style="margin-left:35px;" onclick = "mlp()" value = "Compute">  
         </div>
         
         
@@ -207,13 +207,13 @@ function getRandomColor() {
   j=j+1;
   var color ='';
     if(j==1){
-        color='aqua';
+        color='Green';
     }
     if(j==2){
-        color='yellow';
+        color='Orange';
     }
     if(j==3){
-        color='peach';
+        color='Yellow';
     }
     if(j==4){
         color='pink';

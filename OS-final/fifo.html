@@ -26,10 +26,10 @@
 </nav>
 <br><br><br>
 <div class="page-header" >
-   <h1 style="text-align:center;color:limegreen">PAGE REPLACEMENT ALGORITHM</h1>      
+   <h1 style="text-align:center;color:rgb(230, 9, 57)">PAGE REPLACEMENT ALGORITHM</h1>      
 </div>
 <body>
-<h1 style="text-align:center;color:limegreen">FIFO</h1>      
+<h1 style="margin-left:40px;color:rgb(230, 9, 57)">FIFO</h1>      
 <br>
 <form>
     <div class"container">
@@ -40,7 +40,7 @@
         <div class="form-group row" style="margin-left:40px;width:25vw;display:block">
                 <input type = "text" id="rs" class="form-control" placeholder="Enter the Reference string:">
         </div>
-            <input type = "button" style="margin-left:40px; margin-bottom:20px" class="btn btn-success btn-lg" onclick = "fifo()" value = "Compute">
+            <input type = "button" style="margin-left:40px; margin-bottom:20px" class="btn btn-danger btn-lg" onclick = "fifo()" value = "Compute">
 		<div id="div" class="table-responsive" style="width:80vw;margin:auto;text-align:center"></div>
 		<div id="sp1"></div>
 		<div id="sp2"></div>
@@ -162,8 +162,8 @@ $tbody = $("<tbody></tbody>");
 	  
       $table.append($tbody);
 	  $table.appendTo($("#div"));
-	  $("#sp1").html('<p style="text-align:center">'+"<b>The no of page faults is:</b>"+"   "+'<span style="color:red">'+pf+'</span>'+'</p>')
-	  $("#sp2").html('<p style="text-align:center">'+"<b>The no of page hits is:</b>"+"   "+'<span style="color:green">'+ph+'</span>'+'</p>')
+	  $("#sp1").html('<p style="text-align:center">'+"<b>The no of page faults :</b>"+"   "+'<span style="color:red">'+pf+'</span>'+'</p>')
+	  $("#sp2").html('<p style="text-align:center">'+"<b>The no of page hits :</b>"+"   "+'<span style="color:green">'+ph+'</span>'+'</p>')
       function getRandomColor() {
 		m=m+1;
 		var color ='';
