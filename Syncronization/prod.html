@@ -9,65 +9,27 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
-<body style="background-color:#FFE4B5;height:1500px">
+<body style="background-image: url('blck.jpg');height:1500px">
   <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">OS simulator</a>
+      <a class="navbar-brand" href="../index.html">OS simulator</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="index.html">Home</a></li>
-      <li class="active"><a href="#">Wiki</a></li>
+      <li class="active"><a href="wiki.html">Wiki</a></li>
     </ul>
   </div>
 </nav>
  <br><br><br>
-  <div class="page-header" >
+  <div class="jumbotron">
+    <h1 style="color: rgb(15, 8, 8);float:center;text-align: center;"><b><u>Producer Consumer</b> </u></h1>   
+</div>
 
-    <h1 style="background-color:#CCCC00;float:center"><marquee><b>Producer Consumer</b></marquee> </h1>      
-  </div>
-
-  <div>
-      <form>
-        <textarea id="doc" style="height:40%;width:15%;position:absolute;left:3%;font-size:17px; color :black; background-color:#BDB76B  ;border:solid 2px black; " disabled="">
-while(1)
-  {
-      /* produce an item in next_produced */
-
-      while (counter==BUFFER_SIZE)
-        ; /* do nothing */
-
-      buffer[in] = next_produced;
-      in = (in + 1) % BUFFER_SIZE;
-      counter++;
-  }
-        </textarea>
-      </form>
-    </div>
-
-    <div>
-      <form>
-        <textarea id="doc" style="height:40%;width:15%;position:absolute;right:3%;font-size:17px;color : black; background-color:#BDB76B ;border:solid 2px black; " disabled="">
- while(1)
-  {
-      while(counter == 0)
-        ; /* do nothing */
-
-      next_consumed = buffer[out];
-      out = (out+1) % BUFFER_SIZE;
-      counter--;
-
-      /* consume an item in next_consumed */
-  }
-        </textarea>
-      </form>
-    </div>
-
-
-
-
-
- <button class="btn btn-primary" id ="prod", type ="button", onclick ="barrieradd()", style ="height:10%;width:15%;position:absolute;top:25%;left:42%;font-size:25px;border:solid 4px black;">Next Chance</button>
+ 
+<div style="padding: 23%;">
+  <br><br><br><br>
+ <button class="btn btn-primary" id ="prod", type ="button", onclick ="barrieradd()", style ="height:10%;width:15%;position:absolute;top:38%;left:1%;font-size:25px;border:solid 4px black;">Proceed</button>
 
 <button class="btn btn-primary" id ="prod1", type ="button", style ="height:10%;width:12%;position:absolute;top:80%;left:15%;font-size:25px;background: red;border:solid 4px black;" disabled="">Produce</button>
 
@@ -75,22 +37,59 @@ while(1)
 
 
 
-<button class="btn btn-primary" type = "button", id ="num", name = "num", class = "btn btn-primary", style="height:70px;width:300px;position:absolute;top:25%;left:63%;border:solid 4px black;font-size:17px">Press on Produce </button>
-<button class="btn btn-primary" type = "button", id ="num", name = "num", class = "btn btn-primary", style="height:70px;width:300px;position:absolute;top:25%;left:20%;border:solid 4px black;font-size:17px">Buffer size:5 </button>
+<button class="btn btn-primary" type = "button", id ="num", name = "num", class = "btn btn-primary", style="height:70px;width:300px;position:absolute;top:55%;left:63%;border:solid 4px black;font-size:17px">Press on Produce </button>
+<button class="btn btn-primary" type = "button", id ="num", name = "num", class = "btn btn-primary", style="height:70px;width:300px;position:absolute;top:55%;left:20%;border:solid 4px black;font-size:17px">Buffer size:5 </button>
 
-<button type = "button", id ="one", name = "one", style="height:100px;width:165px;position:absolute;border:solid 4px black;top:50%;left:45%;background-color:white"> </button>
+<button type = "button", id ="one", name = "one", style="height:100px;width:165px;position:absolute;border:solid 4px black;top:65%;left:45%;background-color:white"> </button>
   
-    <button type = "button", id ="two", name = "two", style="height:100px;width:165px;border:solid 4px black;position:absolute;top:65%;left:45%;background-color:white"> </button>
+    <button type = "button", id ="two", name = "two", style="height:100px;width:165px;border:solid 4px black;position:absolute;top:75%;left:45%;background-color:white"> </button>
   
-    <button type = "button", id ="three", name = "three", style="height:100px;width:165px;border:solid 4px black;position:absolute;top:80%;left:45%;background-color:white"> </button>
+    <button type = "button", id ="three", name = "three", style="height:100px;width:165px;border:solid 4px black;position:absolute;top:85%;left:45%;background-color:white"> </button>
   
     <button type = "button", id ="four", name = "four", style="height:100px;width:165px;border:solid 4px black;position:absolute;top:95%;left:45%;background-color:white"> </button>
   
-    <button type = "button", id ="five", name = "five", style="height:100px;width:165px;border:solid 4px black;position:absolute;top:110%;left:45%;background-color:white"> </button>
+    <button type = "button", id ="five", name = "five", style="height:100px;width:165px;border:solid 4px black;position:absolute;top:105%;left:45%;background-color:white"> </button>
+</div>
 
-
-    <button class="btn btn-warning" id ="count", type ="button" style ="height:100px;width:165px;border:solid 4px black;position:absolute;top:38%;left:45%;">counter = 0</button>
-
+    <button class="btn btn-warning" id ="count", type ="button" style ="height:100px;width:165px;border:solid 4px black;position:absolute;top:46%;left:45%;">counter = 0</button>
+    <div class="jumbotron jumbotron-fluid" style="text-align: left;">
+      <div class="container-fluid">
+        <p>The problem describes two processes, the producer and the consumer, who share a common, fixed-size buffer used as a queue. The producer's job is to generate data, put it into the buffer, and start again. At the same time, the consumer is consuming the data (i.e., removing it from the buffer), one piece at a time. The problem is to make sure that the producer won't try to add data into the buffer if it's full and that the consumer won't try to remove data from an empty buffer.</p>   
+<br><br>
+        <h2><b><u>Producer algo</u></b></h2>
+        <p><br>
+          while(1)<br>
+    {    <br>
+        /* produce an item in next_produced */<br>
+  
+        while (counter==BUFFER_SIZE)<br>
+          ; /* do nothing */<br>
+  
+        buffer[in] = next_produced;<br>
+        in = (in + 1) % BUFFER_SIZE;<br>
+        counter++;<br>
+    }
+  </p>
+      </div>
+    </div>
+      <div class="jumbotron jumbotron-fluid" style="text-align: left;">
+        <div class="container-fluid">
+          <h2><b><u>Consumer algo</u></b></h2>
+          <p><br>
+          while(1)<br>
+    {<br>
+        while(counter == 0)<br>
+          ; /* do nothing */<br>
+  
+        next_consumed = buffer[out];<br>
+        out = (out+1) % BUFFER_SIZE;<br>
+        counter--;<br>
+  
+        /* consume an item in next_consumed */<br>
+    }<br>
+    </p>
+  </div>
+      </div>
    </body>
 
 

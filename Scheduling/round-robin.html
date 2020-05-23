@@ -88,7 +88,7 @@ $(document).ready(function(){
   console.log(total);
    console.log(sequence[total].start);
     var totalTime = sequence[total].start;
-    pixel = parseInt(800/totalTime);
+    pixel = parseInt(600/totalTime);
     console.log("%d---%d\n",totalTime,pixel);
     var containerWidth = pixel*totalTime + 2;
     console.log("containerWidth is %d",containerWidth);
@@ -273,7 +273,7 @@ function Dequeue(){
     if(i<stuff.length){
     var table = document.getElementById("ptable");
     console.log(stuff[i].wt);
-    $("#ptable").append("<tr><td>"+stuff[i].no+"</td><td>"+stuff[i].at+"</td><td>"+stuff[i].bt1+"</td><td>"+stuff[i].io+"</td><td>"+stuff[i].bt2+"</td><td>"+stuff[i].wt+"</td><td>"+stuff[i].tat+"</td></tr>");
+    $("#ptable").append("<tr><td>"+stuff[i].no+"</td><td>"+stuff[i].at+"</td><td>"+stuff[i].bt1+"</td><td>"+stuff[i].wt+"</td><td>"+stuff[i].tat+"</td></tr>");
     drawTable(i+1);
   }
   else
@@ -314,11 +314,10 @@ function Dequeue(){
 </script>
 <style>
 body{
-  text-align: center;
+  text-align: center;background-color: rgb(220,220,220);
 }
 th {
-    background-color: #4CAF50;
-    color: white;
+  background-color:rgb(50,50,50);color: white;
 }
 #b{
   font-size:2 em;
@@ -327,9 +326,7 @@ h1{
   font-style: italic;
 }
 .btn{
-  border-radius:12px;
-  background-color: #4CAF50;
-  color:white;
+  border-radius:12px;background-color:rgb(150,150,150);color:white;
 }
 p{
   font-size: 3 em;
@@ -337,12 +334,11 @@ p{
 }
 #ptab{
   display:none;
-  margin-left: 27%;
 }
 
 #outer-div{
   margin: auto;
-  width: 802px;
+  width: 600px;
   height: 100px;
   position: relative;
   border: 1px solid black;
@@ -365,63 +361,60 @@ p{
   text-align: right;
   margin-bottom: 1;
 }
-#ep{
-  margin-left: 30%;
-}
 </style>
 <body>
   <h1>
     Round-Robin Scheduling
   </h1>
-  <br>
-  <h2>
-    Gantt Chart
-  </h2>
-  <br>
-  <div>
-      <h3>Entered Processes:</h3>
-    <table id="ep" class="table table-bordered" style="width:500px">
-      <thead>
-      <th>PNO.</th>
-      <th>Arrival Time </th>
-      <th>Burst Time</th>
-<!--       <th>IO </th> -->
-<!--       <th>Burst Time 2 </th> -->
-    </tr>
-    <tbody id="ept">
-    </tbody>
-  </thead>
-</table>
-  </div>
-  <input type='number' min="0" id='at1' placeholder="arrival time"></input>
-  <input type='number' min="0" id='bt1' placeholder="burst time"></input>
-  <button id="add" class="btn" onclick="AddtoList()">Add</button>
-  <br>
-  <input type='number' min="0" id="tq" placeholder="Time quantum"></input>
-  <button id="start" class="btn">Start</button>
-  <br>
-  <br>
-  <div id="outer-div">
-  </div>
   <br><br><br>
-  <div class="panel-content">
-  <table id="ptab" class="table table-bordered" style="width:600px">
-  <thead>
-  <tr id="thead">
-  <th>PNO.</th>
-  <th>Arrival time</th>
-  <th>Burst time1</th>
-<!--   <th>I/O time</th> -->
-<!--   <th>Burst time2</th> -->
-  <th>Waiting time</th>
-  <th>Turn around time</th>
-  </tr>
-  <tbody id="ptable">
-
-  </tbody>
-  </thead>
-  </table>
+    <div class="container">
+      <div class="container">
+        <div class="col-12 col-md-6">
+          <h3>Processes</h3>
+            <table id="ep" class="table table-bordered">
+              <thead>
+                <th>PNO.</th>
+                <th>Arrival Time </th>
+                <th>Burst Time </th>
+              </thead>
+              <tbody id="ept">
+              </tbody>
+            </table>
+            <input type='number' min="0" id='at1' placeholder="arrival time"></input>
+            <input type='number' min="0" id='bt1' placeholder="burst time"></input>
+            <button id="add" class="btn" onclick="AddtoList()">Add</button>
+            <br>
+            <input type='number' min="0" id="tq" placeholder="Time quantum"></input>
+            <button id="start" class="btn">Start</button>
+        </div>
+        <div class="col-12 col-md-6">
+          <h2>Gantt Chart</h2>
+          <div id="outer-div"></div>
+        </div>
+      </div>
+      <br><br><br>
+      <div class="container">
+        <div class="col-12 col-md-6">
+          <div class="panel-content">
+            <table id="ptab" class="table table-bordered" style="width :600px">
+              <thead>
+              <tr id="thead">
+              <th>PNO.</th>
+              <th>Arrival time</th>
+              <th>Burst time1</th>
+              <th>Waiting time</th>
+              <th>Turn Around Time</th>
+              </tr>
+              <tbody id="ptable">
+              </tbody>
+              </thead>
+            </table>
+          </div>
+        </div>
+        <div class="col-12 col-md-6" style="text-align: center;">
+          <p id="Average" align="center" style="background-color: rgb(150,150,150);"></p>
+        </div>
+      </div>
     </div>
-    <p id="Average"></p>
 </body>
 </html>

@@ -8,58 +8,45 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body style="background-color:#FFE4B5;height:1500px">
+<body style="background-image: url('blck.jpg');height:1500px">
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background: rgb(15, 15, 15);">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">OS simulator</a>
+      <a class="navbar-brand" href="../index.html">OS simulator</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="index.html">Home</a></li>
-      <li class="active"><a href="#">Wiki</a></li>
+      <li class="active"><a href="wiki.html">Wiki</a></li>
     </ul>
   </div>
 </nav>
  <br><br><br>
-  <div class="page-header" style="background-color:#CCCC00;float:center">
-    <h1><marquee><b>Dining Philosopher's</b></marquee></h1>      
+  <div class="page-header" style="float:center;text-align: center;color: blanchedalmond;">
+	
+	<h1><b><u>Dining Philosopher's</b></u></h1>   
+	
   </div>
 
 
-     <div>
-      <form>
-        <textarea id="doc" style="height:250px;width:265px;position:absolute;left:7%;top:50%;font-size:17px;
-        color : black; background-color:#BDB76B;border:solid 2px black; " disabled="">
- process P[i]
- while true do
-   {  THINK;
-      PICKUP(FORK[i], FORK[i+1 mod 5]);
-      EAT;
-      PUTDOWN(FORK[i], FORK[i+1 mod 5])
-   }
-        </textarea>
-      </form>
-    </div>
+     
+<div style="padding: 25%;">
+    <button type ="button", class = "btn btn-primary", onclick ="initiate()", style="height:70px;width:300px;position:absolute;top:36%;left:10%;border:solid 4px black;font-size:25px"  >Next!</button>
 
-    <button type ="button", class = "btn btn-primary", onclick ="initiate()", style="height:70px;width:300px;position:absolute;top:20%;left:10%;border:solid 4px black;font-size:25px"  >Next!</button>
+    <button type = "button", id ="num", name = "num", class = "btn btn-primary", style="height:70px;width:300px;position:absolute;top:36%;left:75%;border:solid 4px black;font-size:17px">Number generated: </button>
 
-    <button type = "button", id ="num", name = "num", class = "btn btn-primary", style="height:70px;width:300px;position:absolute;top:20%;left:75%;border:solid 4px black;font-size:17px">Number generated: </button>
-
-    <button type = "button", id ="table", name = "table", style="height:435px;width:435px;position:absolute;top:50%;left:35%;border-radius:435px;border:solid 4px black;border:1px solid #000;background-color:#CD853F"> </button>
-    <img src="food.png" alt="" style="position:absolute;left:41%;top:37%;width:250px;height:250px;">
-
+    
 
 
 	<!-- <p id="hungry1" style="position:absolute;top:60%;right:23%; font-size: 25px">ter</p>
 	<p id="eating1" style="position:absolute;top:60%;right:3%; font-size: 25px">ter</p>
  -->
-<div style="position:absolute;top:50%;left:70%">
+<div style="position:absolute;top:50%;left:70%;background-color: thistle;">
 
 <!-- <p>rvervboewovbuoewuvowrvuoe</p>
  -->
  <!-- <table  style="font-size:25px;width:100%"> -->
- <table style="width:100%;padding:2px;padding-color:red" border="2px" >
+	<table style="width:100%;padding:2px" ;border="2px" >
   <tr  style="background-color: black; color:white;	">
     <th width="120px" height="50px" style="text-align: center;">Philosopher  </th>
     <th width="120px" height="50px" style="text-align: center;">Thinking</th> 
@@ -113,17 +100,17 @@
         <p style="position:absolute;top:106%;left:38%;">Philosopher 4</p>
         <p style="position:absolute;top:96%;left:56%;">Philosopher 3</p>
 
-    <button type = "button", id ="one", name = "one", style="height:125px;width:125px;position:absolute;top:39%;left:40%;border-radius:125px;border:1px solid #000;  background-image: url('http://icons.iconarchive.com/icons/designbolts/free-male-avatars/128/Male-Avatar-icon.png')">  </button>
+    <button type = "button", id ="one", name = "one", style="height:125px;width:125px;position: absolute;;top:39%;left:40%;border-radius:25px;border:2px solid #000;  background-image: url('http://icons.iconarchive.com/icons/dapino/people/128/brown-woman-icon.png')">  </button>
    
 
    
-    <button type = "button", id ="five", name = "one", style="height:125px;width:125px;position:absolute;top:65%;left:29%;border-radius:125px;border:1px solid #000; background-image: url('http://icons.iconarchive.com/icons/designbolts/free-male-avatars/128/Male-Avatar-Bowler-Hat-icon.png')"> </button>
+    <button type = "button", id ="five", name = "one", style="height:125px;width:125px;position:absolute;top:65%;left:29%;border-radius:25px;border:1px solid #000; background-image: url('http://icons.iconarchive.com/icons/diversity-avatars/avatars/128/girl-in-ballcap-icon.png')"> </button>
    
-    <button type = "button", id ="two", name = "one", style="height:125px;width:125px;position:absolute;top:50%;left:55.5%;border-radius:125px;border:1px solid #000;background-image: url('http://icons.iconarchive.com/icons/designbolts/free-male-avatars/128/Male-Avatar-Goatee-Beard-icon.png')">   </button>
+    <button type = "button", id ="two", name = "one", style="height:125px;width:125px;position:absolute;top:50%;left:55.5%;border-radius:25px;border:1px solid #000;background-image: url('http://icons.iconarchive.com/icons/dapino/people/128/red-woman-icon.png')">   </button>
    
-    <button type = "button", id ="four", name = "one", style="height:125px;width:125px;position:absolute;top:92%;left:37%;border-radius:125px;border:1px solid #000;background-image: url('http://icons.iconarchive.com/icons/designbolts/free-male-avatars/128/Male-Avatar-Emo-Haircut-icon.png')">  </button>
+    <button type = "button", id ="four", name = "one", style="height:125px;width:125px;position:absolute;top:92%;left:37%;border-radius:25px;border:1px solid #000;background-image: url('http://icons.iconarchive.com/icons/dapino/people/128/black-man-icon.png')">  </button>
    
-    <button type = "button", id ="three", name = "one", style="height:125px;width:125px;position:absolute;top:83%;left:55%;border-radius:125px;border:1px solid #000;background-image: url('http://icons.iconarchive.com/icons/designbolts/free-male-avatars/128/Male-Avatar-Hair-icon.png')">  </button>
+    <button type = "button", id ="three", name = "one", style="height:125px;width:125px;position:absolute;top:83%;left:55%;border-radius:25px;border:1px solid #000;background-image: url('http://icons.iconarchive.com/icons/designbolts/free-male-avatars/128/Male-Avatar-Hair-icon.png')">  </button>
 
    
   <img src="http://icons.iconarchive.com/icons/cute-little-factory/breakfast/128/sugar-bowl-filled-icon.png" style="position: absolute;height: 100px;width: 100px; top: 51%;left:42%;visibility: hidden;"  id="bowl1">
@@ -489,8 +476,30 @@
 		          }
       
   }
-    </script>
+	</script>
+	</div>
+<div class="jumbotron jumbotron-fluid" style="text-align: left">
+	<div class="container">
+		<div style="font-size: 20px"><p>Five silent philosophers sit at a round table with bowls of spaghetti. Forks are placed between each pair of adjacent philosophers.
 
+			Each philosopher must alternately think and eat. However, a philosopher can only eat spaghetti when they have both left and right forks. Each fork can be held by only one philosopher and so a philosopher can use the fork only if it is not being used by another philosopher. After an individual philosopher finishes eating, they need to put down both forks so that the forks become available to others. A philosopher can only take the fork on their right or the one on their left as they become available and they cannot start eating before getting both forks.
+			
+			Eating is not limited by the remaining amounts of spaghetti or stomach space; an infinite supply and an infinite demand are assumed.
+			
+			The problem is how to design a discipline of behavior (a concurrent algorithm) such that no philosopher will starve; i.e., each can forever continue to alternate between eating and thinking, assuming that no philosopher can know when others may want to eat or think.</p>   
+	  </div><br><br>
+	<h2><b><u>Algorithm:</u></b></h2>
+	<p>
+process P[i]<br>
+while true do<br>
+ {  THINK;<br>
+	PICKUP(FORK[i], FORK[i+1 mod 5]);<br>
+		EAT;<br>
+	PUTDOWN(FORK[i], FORK[i+1 mod 5])<br>
+ }<br>
+
+  </div>
+  </div>
 
    		
 
