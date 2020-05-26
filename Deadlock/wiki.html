@@ -1,0 +1,57 @@
+<html>
+<title>wiki</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style = "background-color:lightblue;margin : 10px 10px 10px 10px">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" id="gandu" href="../index.html">OS simulator</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a id="gandu" href="index.html">Home</a></li>
+            <li>
+              <a id="gandu" href='wiki.html' >Wiki</a></li>
+          </ul>
+        </div>
+    </div>
+<div style = "margin-top:50px;">
+<h3>Introduction of Deadlock in Operating System</h3>
+
+
+<p>A process in operating systems uses different resources and uses resources in following way.</p>
+<ul>
+    <li> Requests a resource </li>
+    <li> Use the resource </li>
+    <li> Releases the resource</li>
+</ul>
+
+
+
+
+<p>Deadlock is a situation where a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process.
+Consider an example when two trains are coming toward each other on same track and there is only one track, none of the trains can move once they are in front of each other. 
+Similar situation occurs in operating systems when there are two or more processes hold some resources and wait for resources held by other(s). For example, in the below diagram,
+Process 1 is holding Resource 1 and waiting for resource 2 which is acquired by process 2, and process 2 is waiting for resource 1.</p><br><br>
+
+<h6><strong>Deadlock can arise if following four conditions hold simultaneously (Necessary Conditions)</strong></h6><br>
+
+Mutual Exclusion: One or more than one resource are non-sharable (Only one process can use at a time)<br>
+Hold and Wait: A process is holding at least one resource and waiting for resources.<br>
+No Preemption: A resource cannot be taken from a process unless the process releases the resource.<br>
+Circular Wait: A set of processes are waiting for each other in circular form.
+<br><br>
+<h6><strong>Banker’s Algorithm in Operating System</strong></h6>
+<p>The banker’s algorithm is a resource allocation and deadlock avoidance algorithm that tests for safety by simulating the allocation for predetermined maximum possible 
+    amounts of all resources, then makes an “s-state” check to test for possible activities, before deciding whether allocation should be allowed to continue.</p>
+
+</div>
+</body>
+
+</html>
