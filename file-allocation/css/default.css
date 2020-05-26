@@ -19,11 +19,29 @@ body, html { font-size: 100%; padding: 0; margin: 0; }
 .clearfix:before, .clearfix:after { content: " "; display: table; }
 .clearfix:after { clear: both; }
 
+
+
+
+
 body {
 	font-family: 'Lato', Calibri, Arial, sans-serif;
-	color: #000;
+	font-size: large;
+	color: #e2e61a;
 	padding: 10px;
-}
+	background-image: url(https://miro.medium.com/max/1055/1*-sZL_VRdcMyDXjd_WbIOOQ.png);	
+	}
+
+
+	
+
+
+
+
+
+
+
+
+
 
 a {
 	color: #c0392b;
@@ -40,13 +58,24 @@ a:active {
 .container > header {
 	margin: 0 auto;
 	padding: 2em;
+	background: #23d5ab;
+	
+	
+	
 }
+
+
 
 .container > header {
 	text-align: center;
-	background: #d94839;
+	/*background: #d94839;*/
+	
 	padding: 3em;
+
 }
+
+
+
 
 .container > header h1 {
 	font-size: 2.625em;
@@ -141,7 +170,7 @@ a:active {
 button {
 	border: none;
 	padding: 0.6em 1.2em;
-	background: #c0392b;
+	background: #2F08AB;
 	color: #fff;
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	font-size: 1em;
@@ -154,7 +183,7 @@ button {
 }
 
 button:hover {
-	background: #A5281B;
+	background: rgb(44, 156, 151);
 }
 
 @media screen and (max-width: 46.0625em) {
@@ -225,10 +254,13 @@ button:hover {
 		}
 		.some{
 			padding-top: 20px;
-			color:black;
+			color:#ddd;
+			font-weight: 500;
 		}
 	     
-	     
+		 
+	
+
 		input{
 			 width: 10%;
 	    padding: 12px 20px;
@@ -254,7 +286,7 @@ button:hover {
 		}
 
 		.s_cal:hover{
-			 background-color: #3CBC8D;
+			 background-color:#3CBC8D;       
 	    color: white;
 		}
 		.s_done:hover{
